@@ -12,9 +12,10 @@ if (isset($_POST['add'])) {
     $lname = $util->testInput($_POST['lname']);
     $email = $util->testInput($_POST['email']);
     $phone = $util->testInput($_POST['phone']);
+    $country = $util->testInput($_POST['country']);
 
-    if ($db->insert($fname, $lname, $email, $phone)) {
-        echo $util->showMessage('success', 'User inserted successfully!');
+    if ($db->insert($fname, $lname, $email, $phone , $country)) {
+        echo $util->showMessage('success', 'Contact inserted successfully!');
     } else {
         echo $util->showMessage('danger', 'Something went wrong!');
     }
@@ -34,6 +35,7 @@ if (isset($_GET['read'])) {
                       <td>' . $row['last_name'] . '</td>
                       <td>' . $row['email'] . '</td>
                       <td>' . $row['phone'] . '</td>
+                      <td>' . $row['country'] . '</td>
                       <td>
                         <a href="#" id="' . $row['id'] . '" class="btn btn-success btn-sm rounded-pill py-0 editLink" data-toggle="modal" data-target="#editUserModal">Edit</a>
 
@@ -64,8 +66,10 @@ if (isset($_POST['update'])) {
     $lname = $util->testInput($_POST['lname']);
     $email = $util->testInput($_POST['email']);
     $phone = $util->testInput($_POST['phone']);
-
-    if ($db->update($id, $fname, $lname, $email, $phone)) {
+    $country = $util->testInput($_POST['country']);
+    var_dump($country);
+    die();
+    if ($db->update($id, $fname, $lname, $email, $phone , $country)) {
         echo $util->showMessage('success', 'User updated successfully!');
     } else {
         echo $util->showMessage('danger', 'Something went wrong!');

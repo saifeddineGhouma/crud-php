@@ -72,7 +72,8 @@ const editUser = async (id) => {
   document.getElementById("fname").value = response.first_name;
   document.getElementById("lname").value = response.last_name;
   document.getElementById("email").value = response.email;
-  document.getElementById("phone").value = response.phone;
+    document.getElementById("phone").value = response.phone;
+    document.getElementById("country").value = response.country;
 };
 
 // Update User Ajax Request

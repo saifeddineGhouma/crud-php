@@ -41,7 +41,10 @@
               <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter Phone" required>
               <div class="invalid-feedback">Phone is required!</div>
             </div>
-
+            <div class="mb-3">
+              <input type="text" name="country" class="form-control form-control-lg" placeholder="Enter country" required>
+              <div class="invalid-feedback">country is required!</div>
+            </div>
             <div class="mb-3">
               <input type="submit" value="Add User" class="btn btn-primary btn-block btn-lg" id="add-user-btn">
             </div>
@@ -84,6 +87,10 @@
               <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Enter Phone" required>
               <div class="invalid-feedback">Phone is required!</div>
             </div>
+            <div class="mb-3">
+              <input type="text" name="country" id="country" class="form-control form-control-lg" placeholder="Enter Country" required>
+              <div class="invalid-feedback">Country is required!</div>
+            </div>
 
             <div class="mb-3">
               <input type="submit" value="Update User" class="btn btn-success btn-block btn-lg" id="edit-user-btn">
@@ -124,6 +131,7 @@
                 <th>Last Name</th>
                 <th>E-mail</th>
                 <th>Phone</th>
+                 <th>Country</th>
                 <th>Action</th>
               </tr>
             </thead>

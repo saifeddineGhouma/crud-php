@@ -5,15 +5,16 @@ require_once 'config.php';
 class Database extends Config
 {
     // Insert User Into Database
-    public function insert($fname, $lname, $email, $phone)
+    public function insert($fname, $lname, $email, $phone , $country)
     {
-        $sql = 'INSERT INTO users (first_name, last_name, email, phone) VALUES (:fname, :lname, :email, :phone)';
+        $sql = 'INSERT INTO users (first_name, last_name, email, phone , country) VALUES (:fname, :lname, :email, :phone , :country)';
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
           'fname' => $fname,
           'lname' => $lname,
           'email' => $email,
-          'phone' => $phone
+          'phone' => $phone ,
+          'country'=> $country
         ]);
         return true;
     }
@@ -54,16 +55,17 @@ class Database extends Config
     }
 
     // Update Single User
-    public function update($id, $fname, $lname, $email, $phone)
+    public function update($id, $fname, $lname, $email, $phone , $country)
     {
-        $sql = 'UPDATE users SET first_name = :fname, last_name = :lname, email = :email, phone = :phone WHERE id = :id';
+        $sql = 'UPDATE users SET first_name = :fname, last_name = :lname, email = :email, phone = :phone , country = :country WHERE id = :id';
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
           'fname' => $fname,
           'lname' => $lname,
           'email' => $email,
           'phone' => $phone,
-          'id' => $id
+          'country'=> $country ,
+          'id' => $id 
         ]);
 
         return true;
