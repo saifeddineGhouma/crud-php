@@ -46,7 +46,7 @@ if (isset($_GET['read'])) {
         echo $output;
     } else {
         echo '<tr>
-              <td colspan="6">No Users Found in the Database!</td>
+              <td colspan="6">No contacts Found in the Database!</td>
             </tr>';
     }
 }
@@ -67,8 +67,6 @@ if (isset($_POST['update'])) {
     $email = $util->testInput($_POST['email']);
     $phone = $util->testInput($_POST['phone']);
     $country = $util->testInput($_POST['country']);
-    var_dump($country);
-    die();
     if ($db->update($id, $fname, $lname, $email, $phone , $country)) {
         echo $util->showMessage('success', 'User updated successfully!');
     } else {

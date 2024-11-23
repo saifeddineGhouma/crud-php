@@ -15,7 +15,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Add New User</h5>
+          <h5 class="modal-title">Add New Contact </h5>
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -33,12 +33,12 @@
             </div>
 
             <div class="mb-3">
-              <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter E-mail" required>
+              <input type="email" name="email" class="form-control form-control-lg" placeholder="Enter E-mail" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
               <div class="invalid-feedback">E-mail is required!</div>
             </div>
 
             <div class="mb-3">
-              <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter Phone" required>
+              <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Enter Phone" pattern="[0-9]{8}" required>
               <div class="invalid-feedback">Phone is required!</div>
             </div>
             <div class="mb-3">
@@ -79,12 +79,12 @@
             </div>
 
             <div class="mb-3">
-              <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Enter E-mail" required>
+              <input type="email" name="email" id="email" class="form-control form-control-lg" placeholder="Enter E-mail"  pattern="[^@\s]+@[^@\s]+\.[^@\s]+"  required>
               <div class="invalid-feedback">E-mail is required!</div>
             </div>
 
             <div class="mb-3">
-              <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Enter Phone" required>
+              <input type="tel" name="phone" id="phone" class="form-control form-control-lg" placeholder="Enter Phone"  pattern="[0-9]{8}"  required>
               <div class="invalid-feedback">Phone is required!</div>
             </div>
             <div class="mb-3">
@@ -120,7 +120,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <input type="text" name="phone" oninput="searchFunc()"   id="search" class="form-control form-control-lg" placeholder="search" required>
+        <input type="text" name="search" oninput="searchFunc()"   id="search" class="form-control form-control-lg" placeholder="search" required>
         <div class="table-responsive">
 
           <table class="table table-striped table-bordered text-center">
